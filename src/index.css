@@ -105,6 +105,11 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+  @media(pointer:fine){
+    *{
+      cursor: none !important;
+    }
+  }
 }
 
 @layer components {

@@ -12,27 +12,27 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "alex@example.com",
-    href: "mailto:alex@example.com",
+    value: "anjanakp7510@example.com",
+    href: "mailto:anjanakp7510@example.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+91 7593073405",
+    href: "tel:+917593073405",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
-    href: "#",
+    value: "Kannur, Kerala, India",
+    href: "https://maps.app.goo.gl/7C1ERp5jwSmq5Q887",
   },
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Anjana-preman", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/anjana-kp-464aa1249", label: "LinkedIn" },
+  // { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 const Contact = () => {
@@ -56,15 +56,42 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "d2d5b257-271e-44d7-ae41-9567de555491",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+      const result = await response.json();
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: "Please try again or email me directly.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email me directly.",
+        variant: "destructive",
+      });
+    }
+
     setIsSubmitting(false);
   };
 
@@ -104,7 +131,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder="Name"
                       required
                       className="bg-background/50 border-border/50 focus:border-primary"
                     />
@@ -117,7 +144,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder="Email"
                       required
                       className="bg-background/50 border-border/50 focus:border-primary"
                     />

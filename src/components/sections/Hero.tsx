@@ -55,14 +55,14 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.span
+          {/* <motion.span
             className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
             Available for new projects
-          </motion.span>
+          </motion.span> */}
         </motion.div>
 
         <motion.h1
@@ -90,8 +90,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          A 25-year-old passionate developer crafting exceptional web experiences
-          with modern technologies and clean, maintainable code.
+        “MCA graduate and full-stack developer passionate about building modern, user-friendly web applications with clean and efficient code.”
         </motion.p>
 
         <motion.div
@@ -100,6 +99,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
+          <a href="#projects">
           <Button variant="hero" size="lg" className="group">
             View Projects
             <motion.span
@@ -110,9 +110,12 @@ const Hero = () => {
               →
             </motion.span>
           </Button>
+          </a>
+          <a href="/resume.pdf" download="Anjana-KP-Resume.pdf">
           <Button variant="heroOutline" size="lg">
-            Contact Me
+            Download Resume
           </Button>
+          </a>
         </motion.div>
 
         <motion.div

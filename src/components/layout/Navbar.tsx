@@ -26,13 +26,20 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav py-3" : "py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-3" : "py-6"
+        }`}
     >
       <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold gradient-text">
-          AC
+        <a href="#" className="flex items-center gap-2">
+          <img
+            src="/portfolio-img.png"
+            alt="Profile"
+            className="w-12 h-12 rounded-full object-cover border-2 border-purple-400"
+          />
+
+          {/* <span className="text-xl font-bold gradient-text">
+    Anjana
+  </span> */}
         </a>
 
         {/* Desktop Navigation */}
@@ -47,8 +54,9 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </a>
           ))}
-          <Button variant="hero" size="sm">
-            Get in Touch
+          <Button variant="hero" size="sm" asChild>
+            <a href="#contact">   Get in Touch </a>
+          
           </Button>
         </div>
 

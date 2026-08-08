@@ -2,6 +2,7 @@
  import { Award, ExternalLink } from "lucide-react";
  
  const Certificates = () => {
+  const linkedInUrl ="https://www.linkedin.com/in/anjana-kp-464aa1249/details/certifications/"
    const certificates = [
      {
        id: 1,
@@ -106,13 +107,23 @@
                    </p>
  
                    {/* View button */}
-                   <motion.button
+                   {/* <motion.button
                      whileHover={{ x: 4 }}
                      className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
                    >
                      View Certificate
                      <ExternalLink className="w-4 h-4" />
-                   </motion.button>
+                   </motion.button> */}
+                   <motion.a 
+                      href={linkedInUrl}
+                      targrt="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{x:4}}
+                      className="inline-flex item-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+                    >
+                      View Certificate
+                      <ExternalLink className="w-4 h-4"/>
+                    </motion.a>
                  </div>
                </div>
              </motion.div>

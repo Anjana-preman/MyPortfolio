@@ -108,9 +108,9 @@ const Education = () => {
                 </div>
 
                 {/* Decorative number */}
-                <div className="absolute -bottom-4 -right-2 text-8xl font-black text-primary/5 pointer-events-none select-none">
+                {/* <div className="absolute -bottom-4 -right-2 text-8xl font-black text-primary/5 pointer-events-none select-none">
                   0{index + 1}
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

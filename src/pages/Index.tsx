@@ -6,7 +6,7 @@ import Education from "@/components/sections/Education";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
-import HireMe from "@/components/sections/HireMe";
+// import HireMe from "@/components/sections/HireMe";
 import Certificates from "@/components/sections/Certificates";
 
 const Index = () => {
@@ -21,7 +21,7 @@ const Index = () => {
         <Experience />
         <Certificates />
         <Projects />
-        <HireMe />
+        {/* <HireMe /> */}
         <Contact />
       </main>
       

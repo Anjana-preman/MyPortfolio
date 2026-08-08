@@ -4,66 +4,57 @@ import GlassCard from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/button";
 
 const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with product management, cart functionality, and secure payment processing using Stripe.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    technologies: ["Vue.js", "Laravel", "PostgreSQL", "WebSockets"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "Social Media Dashboard",
-    description: "An analytics dashboard for social media managers with data visualization, scheduling, and automated reporting.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    technologies: ["React", "D3.js", "Express", "Redis"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "Weather Application",
-    description: "A beautiful weather app with location-based forecasts, interactive maps, and severe weather alerts.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&h=400&fit=crop",
-    technologies: ["React", "OpenWeather API", "Mapbox"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Portfolio Website",
-    description: "A modern, responsive portfolio website with smooth animations and dark theme design.",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Blog Platform",
-    description: "A content management system with markdown support, SEO optimization, and reader engagement features.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
-    technologies: ["Next.js", "Prisma", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
-  },
+{
+  id: 1,
+  title: "GamerZone",
+  description: "E-commerce platform for a gaming hardware retailer in Qatar, featuring product catalog browsing by category and brand, a custom PC builder tool, cart, wishlist, and order tracking.",
+  image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop",
+  technologies: ["Laravel","Php","html","Css","Js","Mysql"],
+  liveUrl: "https://gamerzoneme.com/en",
+  githubUrl: null,
+  featured: true,
+},
+{
+  id: 2,
+  title: "Malbelle",
+  description: "E-commerce store for a fashion and jewellery brand in the UAE, featuring product catalog, wishlist, cart, and checkout functionality.",
+  image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop",
+  technologies: ["Laravel","Php","html","Css","Js","Mysql"],
+  liveUrl: "https://malbelle.com/",
+  githubUrl: null,
+  featured: true,
+},
+{
+  id: 3,
+  title: "Neo Dynamite Events",
+  description: "Business website for a Dubai-based event management company, showcasing services, an event gallery, client testimonials, and a contact/registration system.",
+  image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop",
+  technologies: ["html","Css","Js"],
+  liveUrl: "https://neodynamite.ae/",
+  githubUrl: null,
+  featured: true,
+},
+{
+  id: 4,
+  title: "Arabian Hearts",
+  description: "Website for a Dubai-based volunteer organization, including an about section, event gallery, contact form, and volunteer registration system.",
+  image: "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=600&h=400&fit=crop",
+  technologies: ["html","Css","Js"],
+  liveUrl: "https://arabianhearts.ae/",
+  githubUrl: null,
+  featured: true,
+},
+{
+  id: 5,
+  title: "NSS Management System",
+  description: "A web-based system to automate National Service Scheme (NSS) activities for colleges, replacing manual record-keeping. Supports four user roles (Volunteer, Program Officer, Principal, Section Officer) for managing camp participation, approvals, and report generation.",
+  image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop",
+  technologies:["PHP", "MySQL", "HTML", "XAMPP"],
+  liveUrl:null,
+  githubUrl: null,
+  featured: true,
+},
+
 ];
 
 const Projects = () => {
@@ -109,12 +100,12 @@ const Projects = () => {
                         Live
                       </a>
                     </Button>
-                    <Button variant="heroOutline" size="sm" asChild>
+                    {/* <Button variant="heroOutline" size="sm" asChild>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github size={16} />
                         Code
                       </a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
@@ -143,7 +134,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-2xl font-bold text-center mb-8"
         >
-          Other Noteworthy Projects
+          {/* Other Noteworthy Projects */}
         </motion.h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.filter(p => !p.featured).map((project, index) => (

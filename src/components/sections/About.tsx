@@ -39,20 +39,15 @@ const About = () => {
           >
             <GlassCard className="relative">
               <div className="space-y-4 text-muted-foreground">
-                <p className="text-lg leading-relaxed">
-                  I'm a <span className="text-foreground font-medium">25-year-old Full-Stack Developer</span> with 
-                  a passion for building elegant, performant web applications that make a difference.
+                <p>I am an MCA graduate and Full-Stack Developer with experience in building responsive and user-friendly web applications. I have worked with technologies such as PHP, Laravel, MySQL, HTML, CSS, JavaScript, Bootstrap, and REST APIs.
                 </p>
-                <p className="leading-relaxed">
-                  My journey in web development started with curiosity and has evolved into a 
-                  deep love for creating seamless user experiences. I specialize in modern 
-                  JavaScript frameworks, backend development with PHP/Laravel and Node.js, 
-                  and I always prioritize clean, maintainable code.
+                <p>  I enjoy developing clean, efficient, and modern websites while continuously learning new technologies and improving my development skills. I am passionate about creating practical digital solutions and contributing to innovative projects.
                 </p>
-                <p className="leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, contributing 
-                  to open-source projects, or sharing knowledge with the developer community.
+                <p>
+                  I am currently looking for opportunities to grow as a software developer and gain more experience in real-world application development.
                 </p>
+
+
               </div>
 
               {/* Decorative gradient corner */}
@@ -63,7 +58,7 @@ const About = () => {
           <div className="grid grid-cols-3 gap-4">
             {highlights.map((item, index) => (
               <FloatingIcon key={item.label} delay={index * 0.2} duration={3 + index * 0.5}>
-                <GlassCard 
+                <GlassCard
                   className="text-center hover:border-primary/50 transition-colors cursor-default"
                   delay={index * 0.1}
                 >
