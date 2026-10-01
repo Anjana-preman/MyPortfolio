@@ -31,8 +31,8 @@ const Navbar = () => {
     >
       <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <img
-            src="/portfolio-img.png"
+         <img
+            src={`${import.meta.env.BASE_URL}portfolio-img.png`}
             alt="Profile"
             className="w-12 h-12 rounded-full object-cover border-2 border-purple-400"
           />
